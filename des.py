@@ -1,13 +1,3 @@
-"""
-des.py
-Manual DES implementation for educational purposes.
-
-No cryptography/encryption library is used.
-DES operates on 64-bit blocks with a 64-bit key (56 effective key bits).
-This implementation supports UTF-8 text by encoding it to bytes and applying
-PKCS#5/PKCS#7-style padding for the 8-byte DES block size.
-"""
-
 IP = [
     58, 50, 42, 34, 26, 18, 10, 2,
     60, 52, 44, 36, 28, 20, 12, 4,
@@ -205,11 +195,6 @@ def crypt_block(block8, round_keys):
 
 
 def normalize_key(key):
-    """
-    DES uses exactly 8 bytes.
-    If the user gives a shorter key, pad with ASCII '0'.
-    If longer, use the first 8 bytes.
-    """
     raw = key.encode("utf-8")
     if len(raw) < 8:
         raw += b"0" * (8 - len(raw))
