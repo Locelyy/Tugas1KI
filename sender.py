@@ -1,11 +1,3 @@
-"""
-sender.py
-Run this file in Terminal A.
-
-The sender and receiver both know the shared DES key beforehand.
-The key is NEVER sent through the socket.
-"""
-
 import socket
 from datetime import datetime
 from des import encrypt_to_hex, decrypt_from_hex
