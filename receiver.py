@@ -1,11 +1,3 @@
-"""
-receiver.py
-Run this file in Terminal B.
-
-The receiver decrypts ciphertext using the same pre-shared DES key.
-The key is NEVER sent through the socket.
-"""
-
 import socket
 from datetime import datetime
 from des import encrypt_to_hex, decrypt_from_hex
