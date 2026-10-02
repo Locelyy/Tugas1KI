@@ -1,8 +1,3 @@
-"""
-common.py
-Small networking helpers. No encryption is performed here.
-"""
-
 import json
 import socket
 
